@@ -73,6 +73,11 @@ def read_autoclass_csv(bin,labels):
     url='https://ifcb.caloos.org/del-mar-mooring/' # place holder for the moment will use SC Wharf
     file_name=bin+"_class_scores.csv"
     bin_url=url+file_name
+    lx=len(labels)
+    # Need to replace blanks in name with "_"
+    for i in np.arange(0,lx):
+        # Not graceful code but a quick fix
+        labels[i]=labels[i].replace(' ','_')
     try:
         autoclass=pd.read_csv(bin_url)
         if len(labels > 0):
@@ -82,7 +87,7 @@ def read_autoclass_csv(bin,labels):
             print("Target labels must be supplied (i.e column headers)")
             return(np.nan)
     except:
-        # currently an error causes this to happen even if file exists
+        # 
         print("Failed to read autoclass csv for bin "+bin)
         return(np.nan)
 
