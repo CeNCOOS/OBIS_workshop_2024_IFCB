@@ -35,7 +35,7 @@ def get_ifcb_metadata(bin):
         content=json.loads(content)
         return(content)
     else:
-        print("Metadata GET request failed with code: "+response.status_code)
+        print("Metadata GET request failed with code: "+str(response.status_code))
         return(response.status_code)
 
 # Ian's OBIS Workshop R code translated to python
@@ -60,7 +60,7 @@ def bin_has_autoclass(bin):
         content=json.loads(content)       
         return(content['has_class_scores'])
     else:
-        print('Autclass GET faile with code: '+response.status_code)
+        print('Autclass GET faile with code: '+str(response.status_code))
         return(response.status_code)
 
 # Ian's read autoclass function translated to python
@@ -101,7 +101,7 @@ def get_bin_details(bin):
         newdict.update(content)
         return(newdict)
     else:
-        print("Bin neighbors GET request failed with code: "+response.status_code)
+        print("Bin neighbors GET request failed with code: "+str(response.status_code))
         return(response.status_code)
 
 # Date range IDs using Ian's function translated to python
@@ -117,7 +117,7 @@ def get_bins_in_range(start_date,end_date):
         content=content["pid"]
         return(content)
     else:
-        print('Failed to get all bins with range with code: '+response.status_code)
+        print('Failed to get all bins with range with code: '+str(response.status_code))
         return(response.status_code)
 
 def get_worms_taxonomy(taxa):
