@@ -82,6 +82,7 @@ def read_autoclass_csv(bin,labels):
             print("Target labels must be supplied (i.e column headers)")
             return(np.nan)
     except:
+        # currently an error causes this to happen even if file exists
         print("Failed to read autoclass csv for bin "+bin)
         return(np.nan)
 
