@@ -70,7 +70,8 @@ def read_autoclass_csv(bin,labels):
     # input is the binID and the labels
     # DYYYYMMDDTHHmmss_IFCBNNN    
     # NOTE URL needs to be changed below!
-    url='https://ifcb.caloos.org/del-mar-mooring/' # place holder for the moment will use SC Wharf
+    url='https://ifcb.caloos.org/santa-cruz-municipal-wharf/'
+    #url='https://ifcb.caloos.org/del-mar-mooring/' # place holder for the moment will use SC Wharf
     file_name=bin+"_class_scores.csv"
     bin_url=url+file_name
     lx=len(labels)
@@ -113,7 +114,8 @@ def get_bin_details(bin):
 # Date range IDs using Ian's function translated to python
 def get_bins_in_range(start_date,end_date):
     # Dates should be of the form yyyy-mm-dd
-    url="https://ifcb.caloos.org/del-mar-mooring/api/feed/temperature/start/"+start_date+"/end/"+end_date
+    url="https://ifcb.caloos.org/santa-cruz-municipal-wharf/api/feed/temperature/start/"+start_date+"/end/"+end_date
+    #url="https://ifcb.caloos.org/del-mar-mooring/api/feed/temperature/start/"+start_date+"/end/"+end_date
     response=requests.get(url)
     if response.status_code==200:
         content=response.content
