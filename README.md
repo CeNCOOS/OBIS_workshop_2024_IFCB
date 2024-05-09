@@ -9,8 +9,12 @@ This is a repository for OBIS 2024 Workshop.  The plan is to take work done by A
 Code has already been created to generate Event and Occurance tables.  The plan is to supplement these with the EMoF table so that it is ready for submission.
 Pre-workshop coding is being done to translate Ian's magnificent work from R to Python.
 
-## How to Run ##
-Add instruction on how to run the code here.
+## How to Run
+Setting up the environoment in `conda`:
+
+    conda create -n obis_ifcb python=3.9 numpy pandas
+    conda activate obis_ifcb
+    pip install pyworms
 
 ## Workflow
 1) Check to see if we can query IFCB api for IFCBs available.</p>
@@ -21,4 +25,4 @@ Add instruction on how to run the code here.
 6) Do the same for the EMoF table </p>
 7) Clean up code to make more efficient and clean 
 
-## Output File Description ##
+## Output File Description
