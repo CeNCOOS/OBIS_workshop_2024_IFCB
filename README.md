@@ -1,8 +1,12 @@
 # Project Title Here
 
-__Add a brief description of the project here.__
+__Add a brief description of the project here. Prepared for 2024 OBIS IOOS Marine Biological Data Mobilization Workshop.__
 
-__Add authors and contact information here.__
+__Authors: Frederick Bahr (CeNCOOS), Patrick Daniels (UCSC), Stace Beaulieu (WHOI) __
+
+**This is a prototype for testing purposes only. A protocol is being developed to determine if and when appropriate to submit products from automated classification to OBIS.**
+
+Sponsored by NOAA PCMHAB20 project “Harmful Algal Bloom Community Technology Accelerator”
 
 ## Background
 This is a repository for OBIS 2024 Workshop.  The plan is to take work done by Axiom and Ian Brunjes from previous workshops and create a full workflow to an OBIS ready output.
