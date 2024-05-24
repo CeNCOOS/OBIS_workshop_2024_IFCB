@@ -65,32 +65,52 @@ def bin_has_autoclass(bin):
 
 # Ian's read autoclass function translated to python
 # Note labels is a list something like labels=["pid","Alexandrium_catenella"] 
-def read_autoclass_csv(bin,labels):
-    # code to grab the actual autoclass information
-    # input is the binID and the labels
-    # DYYYYMMDDTHHmmss_IFCBNNN    
-    # NOTE URL needs to be changed below!
-    url='https://ifcb.caloos.org/santa-cruz-municipal-wharf/'
-    #url='https://ifcb.caloos.org/del-mar-mooring/' # place holder for the moment will use SC Wharf
-    file_name=bin+"_class_scores.csv"
-    bin_url=url+file_name
-    lx=len(labels)
-    # Need to replace blanks in name with "_"
-    for i in np.arange(0,lx):
-        # Not graceful code but a quick fix
-        labels[i]=labels[i].replace(' ','_')
+def get_autoclass_data(bin,dataset_name, base_url='https://ifcb.caloos.org'):
+    """Return autoclassification data for a given bin
+
+    Args:
+        bin (str): bin id to get metadata. Bins are in the form of DYYYYMMDDTHHmmss_IFCBNNN (ex. D20230717T000942_IFCB104)
+        base_url (str, optional): base url of an IFCB dashboard (V2). Defaults to 'https://ifcb.caloos.org'.
+
+    Returns:
+        dict: dictionary of autoclassification data
+    """
     try:
-        autoclass=pd.read_csv(bin_url)
-        if len(labels > 0):
-            autoclass=autoclass[labels]
-            return(autoclass)
-        else:
-            print("Target labels must be supplied (i.e column headers)")
-            return(np.nan)
-    except:
-        # 
-        print("Failed to read autoclass csv for bin "+bin)
-        return(np.nan)
+        url = f"{base_url}/{dataset_name}/{bin}_class_scores.csv"
+        df = pd.read_csv(url)
+        
+    except Exception as e:
+        print(f"Failed to get autoclassification data for bin {bin} with error: {e}")
+        df = None
+        
+    return df
+
+#def read_autoclass_csv(bin,labels):
+#    # code to grab the actual autoclass information
+#    # input is the binID and the labels
+#    # DYYYYMMDDTHHmmss_IFCBNNN    
+#    # NOTE URL needs to be changed below!
+#    url='https://ifcb.caloos.org/santa-cruz-municipal-wharf/'
+#    #url='https://ifcb.caloos.org/del-mar-mooring/' # place holder for the moment will use SC Wharf
+#    file_name=bin+"_class_scores.csv"
+#    bin_url=url+file_name
+#    lx=len(labels)
+#    # Need to replace blanks in name with "_"
+#    for i in np.arange(0,lx):
+#        # Not graceful code but a quick fix
+#        labels[i]=labels[i].replace(' ','_')
+#    try:
+#        autoclass=pd.read_csv(bin_url)
+#        if len(labels > 0):
+#            autoclass=autoclass[labels]
+#            return(autoclass)
+#        else:
+#            print("Target labels must be supplied (i.e column headers)")
+#            return(np.nan)
+#    except:
+#        # 
+#        print("Failed to read autoclass csv for bin "+bin)
+#        return(np.nan)
 
 # Another of Ian's functions translated to python
 def get_bin_details(bin):
