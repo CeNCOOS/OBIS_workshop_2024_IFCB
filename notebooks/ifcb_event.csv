@@ -1,0 +1,2 @@
+datasetName,eventID,eventDate,institutionCode,decimalLongitude,decimalLatitude,countryCode,geodeticDatum,minimumDepthInMeters,maximumDepthInMeters,samplingProtocol
+https://ifcb.caloos.org/santa-cruz-municipal-wharf,D20230717T000942_IFCB104,2023-07-17T00:09:42+00:00,UCSC,-122.021868,36.961491,US,WGS84,1,3,"Methods secton ""IFCB shore station"" from Fischer,A et al. (2020) https://doi.org/10.1002/lno.11443"
