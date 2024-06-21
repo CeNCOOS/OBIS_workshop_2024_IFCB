@@ -19,7 +19,17 @@ Setting up the environoment in `conda`:
     conda create -n obis_ifcb python=3.9 numpy pandas
     conda activate obis_ifcb
     pip install pyworms
-
+Additional packages needed in conda are:
+```
+ import numpy as np
+ import pandas as pd
+ import pyworms
+ import requests
+ import json
+ import os
+ import pyworms
+ import math
+```
 ## Input Files
 - IFCB data products and metadata are acquired using IFCB Dashboard API
 - Also, in data folder: class_names_matched_to_WoRMS, class_thresholds, DwC_matching_to_IFCB
