@@ -21,14 +21,14 @@ Setting up the environoment in `conda`:
     pip install pyworms
 Additional packages needed in conda are
 
-import numpy as np
-import pandas as pd
-import pyworms
-import requests
-import json
-import os
-import pyworms
-import math
+ import numpy as np
+ import pandas as pd
+ import pyworms
+ import requests
+ import json
+ import os
+ import pyworms
+ import math
 
 ## Input Files
 - IFCB data products and metadata are acquired using IFCB Dashboard API
