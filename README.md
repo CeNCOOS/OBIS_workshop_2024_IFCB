@@ -9,8 +9,8 @@ __Authors: Frederick Bahr (CeNCOOS), Patrick Daniel (UCSC), Stace Beaulieu (WHOI
 Sponsored by NOAA PCMHAB20 project “Harmful Algal Bloom Community Technology Accelerator”
 
 ## Background
-This is a repository for OBIS 2024 Workshop.  The plan is to take work done by Axiom and Ian Brunjes from previous workshops and create a full workflow to an OBIS ready output.
-Code has already been created to generate Event and Occurance tables.  The plan is to supplement these with the EMoF table following best practices.
+This is a repository for CeNCOOS at the 2024 OBIS IOOS Marine Biological Data Mobilization Workshop.  The plan is to take work done by Axiom and Ian Brunjes (SCCOOS) from previous workshops and create a full workflow to an OBIS-ENV-Data ready output.
+Code has already been created to generate Event and Occurrence tables.  The plan is to supplement these with the EMoF table following best practices (http://dx.doi.org/10.25607/OBP-1955).
 Pre-workshop coding is being done to translate Ian's magnificent work from R to Python.
 
 ## How to Run
@@ -20,7 +20,12 @@ Setting up the environoment in `conda`:
     conda activate obis_ifcb
     pip install pyworms
 
+## Input Files
+- IFCB data products and metadata are acquired using IFCB Dashboard API
+- Also, in data folder: class_names_matched_to_WoRMS, class_thresholds, DwC_matching_to_IFCB
+
 ## Workflow
+The prototype workflow is run in a notebook (see notebooks folder). Some of the Helper Functions in the notebook are available in the utilities folder.</p>
 1) Check to see if we can query IFCB api for IFCBs available.</p>
 2) Create a Json config file of information that has filenames, paths, and data not available by machine</p>
 3) Move pyworms code section into a module</p>
@@ -29,4 +34,5 @@ Setting up the environoment in `conda`:
 6) Do the same for the EMoF table </p>
 7) Clean up code to make more efficient and clean 
 
-## Output File Description
+## Output Files
+- In data folder: ifcb_event.csv, ifcb_occurrence.csv, ifcb_emof.csv
