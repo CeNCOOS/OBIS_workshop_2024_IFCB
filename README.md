@@ -2,7 +2,7 @@
 
 __Prepared for 2024 OBIS IOOS Marine Biological Data Mobilization Workshop.__
 
-__Authors: Frederick Bahr (CeNCOOS), Patrick Daniel (UCSC), Stace Beaulieu (WHOI) __
+__Authors: Frederick Bahr (CeNCOOS), Patrick Daniel (UCSC), Stace Beaulieu (WHOI)__
 
 **This is a prototype for testing purposes only. A protocol is being developed to determine if and when appropriate to submit products from automated classification to OBIS.**
 
