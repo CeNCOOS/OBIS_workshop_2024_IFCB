@@ -14,10 +14,11 @@ Code has already been created to generate Event and Occurrence tables.  The plan
 Pre-workshop coding is being done to translate Ian's magnificent work from R to Python.
 
 ## How to Run
+```
 Setting up the environment.yml in conda:
 conda create -n obis_ifcb python=3.9
 conda activate obis_ifcb
-
+```
 <!--Setting up the environoment in `conda`:
 
     conda create -n obis_ifcb python=3.9 numpy pandas
