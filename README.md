@@ -16,7 +16,7 @@ Pre-workshop coding is being done to translate Ian's magnificent work from R to 
 ## How to Run
 ```
 Setting up the environment.yml in conda:
-conda create -n obis_ifcb python=3.9
+conda env create -f environment.yml
 conda activate obis_ifcb
 ```
 <!--Setting up the environoment in `conda`:
