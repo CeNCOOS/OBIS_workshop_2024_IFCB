@@ -2,7 +2,7 @@
 
 __Prepared for 2024 OBIS IOOS Marine Biological Data Mobilization Workshop.__
 
-__Authors: Frederick Bahr (CeNCOOS), Patrick Daniel (UCSC), Stace Beaulieu (WHOI)__
+__Participants: Frederick Bahr (CeNCOOS) and Stace Beaulieu (WHOI), with pre- and post-meetings with Patrick Daniel (UCSC)__
 
 **This is a prototype for testing purposes only. A protocol is being developed to determine if and when appropriate to submit products from automated classification to OBIS.**
 
@@ -41,7 +41,7 @@ Additional packages needed in conda are:
 - Also, in data folder: class_names_matched_to_WoRMS, class_thresholds, DwC_matching_to_IFCB
 
 ## Workflow
-The prototype workflow is run in a notebook (see notebooks folder). Some of the Helper Functions in the notebook are available in the utilities folder.</p>
+The prototype workflow is run in a notebook (see notebooks folder).</p>
 1) Load class labels and call WoRMS API</p>
 2) Load class specific thresholds</p>
 3) Load helper functions</p>
